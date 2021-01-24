@@ -1,3 +1,5 @@
+// MAIN VERISON
+
 const LeftPane = Vue.component('LeftPane', {
 	template: `
         <div class="left-pane">
@@ -127,7 +129,7 @@ const RightPane = Vue.component('RightPane', {
             errors: ''
 		}
 	},
-	created() {
+	mounted() {
         const currentLocationUri = new URI()
         let config = {callbackURL: 'https://www.google.com/', auth0Domain: '', clientID: ''}
         if(!currentLocationUri.toString().startsWith('file')) {
